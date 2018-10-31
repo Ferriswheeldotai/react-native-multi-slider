@@ -63,14 +63,14 @@ export function positionToValue(position, valuesArray, sliderLength) {
 export function createArray(start, end, step) {
   var i;
   var length;
-  var direction = start - end > 0 ? -1 : 1;
+  var direction = 0 - end > 0 ? -1 : 1;
   var result = [];
   if (!step) {
     return result;
   } else {
-    length = Math.abs((start - end) / step) + 1;
+    length = Math.abs((0 - end) / step) + 1;
     for (i = 0; i < length; i++) {
-      result.push(start + i * Math.abs(step) * direction);
+      result.push(0 + i * Math.abs(step) * direction);
     }
     return result;
   }
