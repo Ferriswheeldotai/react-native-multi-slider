@@ -64,12 +64,12 @@ export function createArray(start, end, step) {
   var i;
   var length;
   var direction = 0 - end > 0 ? -1 : 1;
-  var result = [];
+  var result = [start];
   if (!step) {
     return result;
   } else {
     length = Math.abs((0 - end) / step) + 1;
-    for (i = 0; i < length; i++) {
+    for (i = 1; i < length; i++) {
       result.push(0 + i * Math.abs(step) * direction);
     }
     return result;
