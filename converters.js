@@ -70,7 +70,10 @@ export function createArray(start, end, step) {
   } else {
     length = Math.abs((0 - end) / step) + 1;
     for (i = 1; i < length; i++) {
-      result.push(0 + i * Math.abs(step) * direction);
+      const nextStep = i * Math.abs(step) * direction;
+      if (nextStep > start) {
+        result.push(nextStep);
+      }
     }
     return result;
   }
